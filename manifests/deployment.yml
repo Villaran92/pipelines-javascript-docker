@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: villaranpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: villaranpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: villaranpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: villaranpipelinesjavascriptdocker 
+          image: viltst1805reg.azurecr.io/villaranpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
